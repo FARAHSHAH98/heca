@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS22-formula</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background: #fff;
+            padding: 0 50px;
+          
+            display: flex;
+            justify-content: space-between;
+           
+            align-items: center;
+            
+            height: 80px;
+            
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+       
+            padding: 0;
+          
+        }
+
+        nav ul li {
+            font-size: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+            transition: color 0.3s ease;
+          
+        }
+
+
+        nav ul li a:hover {
+            color: rgb(246, 156, 171);
+        }
+
+
+        nav ul li a.active {
+            color: rgb(225, 81, 105);
+            font-weight: bold;
+        }
+
+        #color {
+            color: #d35281;
+        }
+
+    
+      
+
+
+        .hero p {
+            font-size: 40px;
+            color: #333;
+            margin-bottom: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10%;
+            line-height: 1.0;
+        }
+
+
+
+        .content .text-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+
+        .content .text-section h2 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #0e0d0d;
+        }
+
+        .content .text-section p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .content .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        
+        .three {
+            font-size: 60px;
+            line-height: 1.2;
+        }
+
+        .one {
+            color: #d81b60;
+        }
+
+        .two {
+            color: #58acec;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #58acec;
+            color: #fff;
+        }
+
+        #sp {
+            font-weight: bold;
+            color: black;
+        }
+
+        #ac {
+            font-weight: bold;
+            color: #267ca7;
+        }
+
+        .pic {
+            height: 25%;
+           
+            width: 45%;
+           
+
+        }
+
+        .ok {
+            font-size: 20px;
+            line-height: 0.9;
+            margin-left: 0;
+            
+        }
+
+        .hero {
+            margin-left: 30px;
+            text-align: center;
+            padding: 40px 60px;
+            background: linear-gradient(#F2F2F2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+
+        }
+
+        .content {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-right: 7%;
+
+        }
+
+        #four {
+            width: 70%;
+            height: auto;
+            bottom-margin: 30px;
+            display: flex;
+
+            margin-left: 0;
+          
+
+        }
+
+        button {
+            width: 170px;
+           
+            height: 45px;
+          
+            font-size: 18px;
+           
+            border-radius: 18px;
+           
+            background-color: #267ca7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+
+        }
+
+        button:hover {
+            color: #83bfec;
+            background-color: #58acec;
+
+        }
+
+        .seven {
+            color: #d81b60;
+        }
+
+        .cycle {
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            margin-left: 6%;
+        }
+
+        .six img {
+            width: 400px;
+            height: auto;
+           
+            margin-left: 20px;
+        }
+
+        .five p {
+            font-size: 10px;
+            width: 400px;
+        }
+
+        .five h2 {
+            font-size: 23px;
+        }
+
+
+
+        .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: relative;
+            color: #333;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: #d35281;
+            color: white;
+            font-size: 14px;
+            padding: 3px 7px;
+            border-radius: 50%;
+        }
+
+
+
+
+
+
+
+        .ten {
+            max-width: 850px;
+            margin: 15px auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 2px dashed #000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .twelve {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .twelve h2 {
+            font-size: 4em;
+            margin: 0;
+            color: #0c1224;
+            position: absolute;
+
+            transform: translateY(-50%) rotate(-90deg);
+            white-space: nowrap;
+            margin-right: 50%;
+            margin-top: 20%;
+            right: 21%;
+
+
+
+
+        }
+
+        .nine {
+            margin-left: 20px;
+        }
+
+        .nine h3 {
+            color: #2076a8;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        .nine p {
+            font-size: 10px;
+            margin: 0 0 15px 0;
+            line-height: 1.0;
+            width: 700px;
+            color: #333333;
+        }
+
+        .et {
+            display: flex;
+            margin-left: 12%;
+        }
+
+        .para4 {
+            align-items: center;
+            padding: 80px;
+
+        }
+
+        .thirteen {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .fourteen p {
+            font-size: 12px;
+            line-height: 1.3;
+        }
+
+        .black {
+            color: #0c1224;
+        }
+
+        .blue {
+            color: #2076a8;
+        }
+
+        .pink {
+            color: #d81b60;
+        }
+
+
+        .fifteen {
+            margin-top: 0;
+            align-items: center;
+            padding: 0px 80px;
+        }
+
+        .sixteen {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1.0;
+
+        }
+
+        .seventeen {
+            font-size: 12px;
+            line-height: 1.4;
+
+        }
+
+        .eighteen {
+            font-size: 10px;
+
+        }
+
+        .con {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .car {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+         
+        }
+
+        #twentyone {
+            flex: 0 0 auto;
+            width: 300px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #twentyone img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #twentyone h3 {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #twentyone p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .arrow-button {
+            padding: 10px 10px;
+            font-size: 6px;
+            background-color: #267ca7;
+            color: white;
+            border: none;
+            border-radius: 50%;
+           
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow-button:hover {
+            background-color: #58acec;
+        }
+
+        .prev-button::before {
+            content: "\25C0";
+            
+        }
+
+        .next-button::before {
+            content: "\25B6";
+           
+        }
+
+
+        .shop-now-btn {
+            background-color: #fefefe65;
+            color: rgb(70, 68, 68);
+
+            padding: 10px 15px;
+            border-radius: 5px #fefefe00;
+            cursor: pointer;
+            font-size: 14px;
+            border: 2px solid #8b938b;
+        
+        }
+
+        .shop-now-btn:hover {
+            background-color: #616364;
+            color: #0c1224;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #0d1c28;
+            display: none;
+           
+        }
+
+        .ainer {
+            max-width: 800px;
+            height: auto;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .ainer h1 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .faq-section {
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            font-weight: 0;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f3f7f3;
+            color: rgb(20, 17, 17);
+            border: 2px solid black;
+            width: 100%;
+            text-align: left;
+            border-radius: 5px;
+            outline: none;
+            font-size: smaller;
+        }
+
+        .faq-question:hover {
+            background-color: #616364;
+            color: #0e0d0d;
+        }
+
+
+        .faq-answer {
+            padding: 5px;
+            display: none;
+            background-color: #f9f9f9;
+            margin-top: 5px;
+            border-radius: 5px;
+            font-size: smaller;
+        }
+
+
+        .indication {
+            padding: 100px;
+            align-items: center;
+        }
+
+        .he {
+            font-weight: 500;
+        }
+
+        .items {
+            font-size: smaller;
+        }
+
+
+
+
+        .tainer {
+            display: flex;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .contact-options {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .option.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .privacy {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            max-width: 300px;
+        }
+
+        .thank-you-message {
+            display: none;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .wave {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #ff5722;
+    clip-path: polygon(0 40%, 25% 45%, 50% 35%, 75% 45%, 100% 40%, 100% 100%, 0 100%);
+  }
+  
+  .wave2 {
+    background: rgba(255, 87, 34, 0.7);
+    height: 150px;
+    top: 50px;
+    clip-path: polygon(0 50%, 20% 60%, 40% 50%, 60% 65%, 80% 55%, 100% 60%, 100% 100%, 0 100%);
+  }
+  
+  .wave3 {
+    background: rgba(255, 87, 34, 0.5);
+    height: 100px;
+    top: 100px;
+    clip-path: polygon(0 60%, 30% 70%, 60% 60%, 90% 80%, 100% 70%, 100% 100%, 0 100%);
+  }
+
+
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .wave {
+    animation: wave 6s infinite linear;
+  }
+  
+  .wave2 {
+    animation: wave 10s infinite linear;
+  }
+  
+  .wave3 {
+    animation: wave 14s infinite linear;
+  }
+
+  
+   .wave-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  
+  svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    button {
+        width: 100px;
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .wave {
+        height: 70px;
+    }
+}
+
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-left">
+                <li><a href="">Home</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Locations</a></li>
+            </ul>
+        </nav>
+        <div class="logo">CDS<span id="color">22</span>-formula</div>
+        <nav>
+            <ul class="nav-right">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Retailer</a></li>
+                <li><a href="signup.html">Contact</a></li>
+                <li class="cart-icon" onclick="addToCart()">🛒
+                    <span class="cart-count" id="cart-count">0</span>
+
+            </ul>
+
+
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p>The <span id="sp">De Simone <br>
+                Formulation</span>Unique
+            <br>and certified by <span id="ac">the
+                <br>
+                Inventor</span> <br>
+
+            <span class="ok">The De Simone Formulation unique and certified
+                <br>
+                by the Inventor</span>
+        </p>
+
+
+        <img class="pic" src="Assets/cds_450_v2-1.png" alt="CDS22 Formula">
+
+    </section>
+
+    <section class="content">
+        <div class="image-section">
+            <img id="four" src="Assets/professor_desimone-1.png" alt="Scientist">
+        </div>
+        <div class="text-section">
+            <h2 class="three"><span class="one">Science </span>Speaks <br> For <span class="two">Itself</span></h2>
+            <p>The De Simone Formulation contained in CDS22-formula is the only probiotic formulation recommended and
+                recognized by name in the American College of Gastroenterology (AGA) guidelines for the management of
+                pouchitis and other pouch-related disorders.</p>
+
+            <p>The European Crohn’s and Colitis Organization (ECCO) has included the De Simone Formulation in its
+                guidelines for the management of Inflammatory Bowel Diseases (IBD).</p>
+
+            <p>CDS22-formula is highly effective in the dietary management of various gastrointestinal conditions.</p>
+            <br>
+            <button class="btn">View products</button>
+        </div>
+
+    </section>
+
+
+    <section class="cycle">
+        <div class="five">
+            <h2> Why Does It <span class="seven">Work?</span></h2>
+
+            <p>Not all probiotics are the same. The overall biological action of a probiotic is not
+                simply the sum of its individual components’ actions but the result of a complex
+                network of relationships between the microorganisms it contains and the human
+                host. Unlike many other products on the market, the clinical results obtained
+                from CDS22-formula speak louder than any technical description.</p><br>
+
+            <p> CDS22-formula combines 8 bacterial strains selected for their biochemical and
+                enzymatic profiles and specifically calibrated in precise proportions to
+                synergistically act on the physiology of the human gastrointestinal tract.
+                It is crucial to emphasize that the production of the Formulazione De Simone falls
+                within the field of biology, not chemistry, as the bacteria forming the product’s
+                base are living organisms. Their cultivation requires advanced scientific
+                knowledge and specific know-how, still protected by industrial secrecy</p><br>
+
+
+            <p> The unique and advanced know-how developed by Prof. Claudio De Simone,
+                which includes specific industrial secrets, contributes to the uniqueness and
+                efficacy of CDS22-formula, making it extremely difficult for others to replicate or
+                produce an identical or functionally equivalent product.
+                Supported by solid scientific evidence, CDS22-formula is highly effective in the
+                dietary management of dysbiosis and other gastrointestinal conditions, offering
+                proven and replicable clinical results
+            </p><br>
+        </div>
+
+
+        <div class="six">
+            <img src="Assets/Cycle.png" alt="cycle img">
+
+        </div>
+
+    </section>
+
+    <div class="et">
+        <div class="ten">
+            <div class="twelve">
+                <h2>Benefits:</h2>
+                <div class="nine">
+                    <h3>Control of intestinal dysbiosis:</h3>
+                    <p>Intestinal dysbiosis is a condition where the natural balance of microorganisms in the intestine
+                        is altered, causing various gastrointestinal disorders. Controlling dysbiosis is crucial for
+                        maintaining digestive health, improving patient comfort, and contributing to overall well-being,
+                        even in cases of chronic intestinal disorders like irritable bowel syndrome, ulcerative colitis,
+                        and pouchitis.</p>
+
+                    <h3>Immediate and prolonged restoration of intestinal flora:</h3>
+                    <p>CDS22-formula is ideal for both acute and chronic episodes of intestinal dysbiosis. It reduces
+                        the severity and duration of symptoms, improving patient comfort and accelerating recovery. It
+                        is particularly indicated for supporting intestinal health and can be beneficial in cases of
+                        temporary or chronic intestinal disorders characterized by accelerated transit that prevents
+                        normal daily activities or adequate night rest.</p>
+
+                    <h3>Variety of Dosages:</h3>
+                    <p>Available in different formats and dosages to support intestinal health and adapt to individual
+                        dietary needs, offering flexibility to healthcare professionals in personalizing
+                        supplementation.</p>
+
+                    <h3>Original Formulation:</h3>
+                    <p>CDS22-formula is the original FormulazioneDe Simone, a unique combination of proprietary
+                        bacterial strains designed to maximize intestinal well-being. The strains are cultivated and
+                        maintained in proprietary Master Cell Banks, ensuring purity, quality, and consistency in every
+                        production.</p>
+
+                    <h3>Guaranteed Safety:</h3>
+                    <p>Every dose has been tested to ensure maximum efficacy and safety. Thanks to a short supply chain
+                        approved by the inventor, the product maintains the highest quality standards from raw material
+                        to packaging.</p>
+
+                    <h3>Affordability:</h3>
+                    <p>CDS22-formula offers superior value compared to probiotics containing equivalent quantities of
+                        bacteria. Efficient production and direct cost control allow us to offer a more affordable
+                        product on the market.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="para4">
+        <div class="thirteen">
+            <h2>
+                <span class="black">De</span>
+                <span class="pink">Simone</span>
+                <span class="blue">Formulation</span>
+
+            </h2>
+        </div>
+
+
+        <div class="fourteen">
+            <p>The De Simone Formulation contained in CDS22-formula is the result of pioneering research by Professor
+                Claudio De Simone (MD, FAGA), who redefined
+                therapeutic approaches to intestinal health by introducing the use of high-concentration probiotic
+                mixtures to dietetically manage acute and chronic
+                gastrointestinal disorders.</p><br>
+
+            <p> His interest in the intestinal microbiota dates back to the 1980s when the importance of the intestinal
+                flora’s role was just beginning to be
+                understood. Professor De Simone is an honorary member of the American College of Gastroenterology and,
+                after graduating in Medicine and
+                Surgery, specialized in gastroenterology, allergology, and clinical immunology. He taught Infectious
+                Diseases at the University of L’Aquila (Italy).</p><br>
+
+            <p> He has published over 200 clinical studies, scientific articles, and book chapters.</p><br>
+            <p> Since the commercial launch of his renowned De Simone Formulation in the 1990s, the Professor has
+                actively advocated for better regulation and quality
+                control of probiotics, highlighting the potential health and well-being risks</p><br>
+            <p> As emphasized by Professor De Simone in numerous conferences and publications, many marketed probiotics
+                have not been clinically tested or may not
+                correspond to the original clinically tested formulations when marketed, causing substantial differences
+                in the safety and efficacy of the final product <u>(De
+                    Simone C. Clinical Gastroenterology and Hepatology Vol. 16 No. 9 2018)</u></p><br>
+            <p> Current regulations often do not require thorough comparative studies to ensure that changes in
+                manufacturing processes do not compromise the efficacy and
+                safety of the commercially distributed probiotic product</p>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="fifteen">
+
+        <div class="sixteen">
+            <h2>There is ONE</h2>
+            <h3>De <span class="pink">Simone </span><span class="blue">Formula</span></h3>
+        </div>
+
+        <div class="seventeen">
+            <br>
+            <p>The lack of strict regulation and the possibility for manufacturers to modify formulations without
+                adequately informing consumers pose a threat to public trust.
+                In the past, the De Simone Formulation (DSF) was sold under the brand name VSL#3®*, by VSL
+                Pharmaceuticals and Actial Srl.</p><br>
+            <p> In 2019, VSL#3® distributors were found guilty of false advertising (for more information: <u> Federal
+                    Judge Upholds $18M Verdict, Blocks False Advertising of
+                    VSL#3, Schulman Bhattacharya</u>). Recently, the European Crohn’s and Colitis Organisation (ECCO)
+                has updated its guidelines to clarify that pre-2016 literature
+                references to VSL#3® exclusively refer to DSF (<u>ECCO, ECCO News, 2023</u>). In 2024, ESPEN (European
+                Society for Clinical Nutrition and Metabolism) published
+                the article <u>“Clarifying Correct Attributions in Scientific Literature: The Case of the De Simone
+                    Formulation and VSL#3®“</u>, which reiterates the above.</p><br>
+            <p> The De Simone Formulation is sold under the brand name “Visbiome” in the USA and Canada (Exegi) and
+                under the brand name “De Simone Formulation” in
+                Korea (HectoHealthcare).</p><br>
+            <p> <u>Soon to be available in the EU under the brand CDS22-formula.</u></p> <br>
+            <p class="eighteen"> *is a registered trademark of VSL Pharmaceuticals and Actial Srl Inc, independent
+                companies from EOS2021 S.r.l</p>
+
+        </div>
+        
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <div>
+        <div class="con">
+            <h1>Product Packaging</h1>
+            <div class="car">
+                
+                <button class="arrow-button prev-button"></button>
+
+                
+                <div class="card" id="twentyone">
+                    <img src="Assets/cds_112_v2-1.png" alt="Product 1">
+                    <h3>CDS22-formula 900 Billion Sachets</h3>
+                    <p>Potency: 900 billion live bacteria per sachet</p>
+                    <button class="shop-now-btn" onclick="addToList()">Shop Now</button>
+                </div>
+                <div class="card" id="twentyone">
+                    <img src="Assets/cds_112_v2-1.png" alt="Product 2">
+                    <h3>CDS22-formula 450 Billion Sachets</h3>
+                    <p>Potency: 450 billion live bacteria per sachet</p>
+                    <button class="shop-now-btn" onclick="addToList()">Shop Now</button>
+                </div>
+                <div class="card" id="twentyone">
+                    <img src="Assets/cds_112_v2-1.png" alt="Product 3">
+                    <h3>CDS22-formula 112 Billion Capsules</h3>
+                    <p>Potency: 112 billion live bacteria per capsule</p>
+                    <button class="shop-now-btn" onclick="addToList()">Shop Now</button>
+                </div>
+
+              
+                <button class="arrow-button next-button"></button>
+            </div>
+            <div class="message" id="message">Item added to your list!</div>
+        </div>
+    </div>
+
+
+
+    <div class="indication">
+        <div class="he">
+            <h3>
+                <span class="blue"> Follow the dosage instructions indicated on the packaging</span>
+            </h3>
+        </div>
+        <div class="items">
+            <ul>
+                <li> Do not exceed the stated recommended daily dose unless otherwise advised by a doctor.</li>
+                <li> Store the product in the refrigerator at a temperature of 2-8°C and away from light. The product
+                    can withstand room temperature (max 25°C) for one
+                    week without altering its effectiveness.</li>
+                <li> CDS22-formula is a food supplement; it does not replace a varied and balanced diet.</li>
+                <li> Keep out of reach of young children</li>
+                <li> This product is not intended for the diagnosis, treatment, cure, or prevention of diseases.</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <div class="ainer">
+        <h1><span class="pink">FAQ:</span></h1>
+
+        <div class="faq-section">
+            <button class="faq-question">What does CDS22-formula contain?</button>
+            <div class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, rem! </div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Where can I find CDS22-formula?</button>
+            <div class="faq-answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, deleniti?</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Why should I take CDS22-formula?</button>
+            <div class="faq-answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae
+                molestias obcaecati quos aliquam totam maxime! Nisi sunt commodi veniam.</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">How do I take CDS22-formula?</button>
+            <div class="faq-answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, modi!</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Does CDS22-formula contain allergens?</button>
+            <div class="faq-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, veniam.</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Why must CDS22-formula be stored in the refrigerator?</button>
+            <div class="faq-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestias!</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Can CDS22-formula have side effects?</button>
+            <div class="faq-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, saepe. Quisquam
+                nihil itaque, distinctio fugit quos totam voluptatem quas tempore voluptatum aspernatur laboriosam odio
+                eos cumque. Modi saepe earum rem!</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Can CDS22-formula be taken during antibiotic therapy?</button>
+            <div class="faq-answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, pariatur sit
+                maiores consequatur dolorum officia non aperiam neque aliquam consequuntur nihil, accusamus animi
+                facilis, excepturi sint rerum? Ullam, quas quidem?</div>
+        </div>
+
+        <div class="faq-section">
+            <button class="faq-question">Can CDS22-formula be taken during pregnancy?</button>
+            <div class="faq-answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad eum, provident at sit
+                quasi quod numquam sint tenetur dolores corporis vel unde magnam sunt, facere, veniam consequatur
+                voluptatem? Velit, quos?</div>
+        </div>
+
+    </div>
+
+
+    <div class="tainer">
+        <div class="contact-form">
+          
+            <div class="contact-options">
+                <label for="privacyCheckbox" class="option active">Say Hi</label>
+                <label for="privacyCheckbox" class="option">Get a Quote</label>
+            </div>
+
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="privacyCheckbox" required>
+                    <label for="privacyCheckbox">I consent to the processing of personal data after reading the Privacy
+                        Policy</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="thank-you-message" id="thankYouMessage">
+                Thank you for your message, we will consider it.
+            </div>
+        </div>
+      
+        <div class="product-image">
+                   
+            <img src="Assets/cds_450_v2-1.png" alt="CDS22-formula">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 CDS22-formula. All rights reserved.</p>
+    </footer>
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+        }
+        const carousel = document.querySelector('.carousel');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        const message = document.getElementById('message');
+        let currentIndex = 0;
+
+        function addToList() {
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 2000);
+        }
+
+        
+        var faqButtons = document.querySelectorAll(".faq-question");
+
+        faqButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var answer = button.nextElementSibling;
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+
+        const contactOptions = document.querySelectorAll('.option');
+
+        contactOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                contactOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+            });
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const privacyCheckbox = document.getElementById('privacyCheckbox').checked;
+
+           
+            if (!name || !email || !message || !privacyCheckbox) {
+                alert('Please fill in all fields and accept the privacy policy.');
+                return;
+            }
+
+            
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            fetch('/submit-contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        thankYouMessage.style.display = 'block';
+                        contactForm.reset();
+                    } else {
+                        alert('Error sending message. Please try again later.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                });
+        });
+
+    </script>
+    <script src="signup.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="login.js"></script>
+    <script src=""></script>
+    <script src=""></script>
+</body>
+
+</html>
